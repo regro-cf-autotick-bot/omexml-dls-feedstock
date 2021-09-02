@@ -1,5 +1,5 @@
 {% set name = "omexml-dls" %}
-{% set version = "1.0.3" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://github.com/DiamondLightSource/python-{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: fbe31ad17782d4a672720034083dd8138eadb6302c2e59f99e64cf8ebf602450
+  sha256: 5ac81de42c148b96ab283236d933744ed92f9ec1d95df67ff22fff6b217d4bfc
 
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
 
@@ -33,7 +33,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'Package to help simply and consistently create and parse OME metadata for B24 of Diamond Light Source Ltd.'
+  summary: Package to help simply and consistently create and parse OME metadata for B24 of Diamond Light Source Ltd.
 
   description: |
     This is a modified copy of python_bioformats' omexml.py with a section 
